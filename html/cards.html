@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Cards</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 15px;
+            height: 100%;
+            font-family: Georgia, serif;
+            background-color: #f7e8e8;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            height: 100%;
+            width: 100%;
+            max-width: 1000px;
+            margin: auto;
+            align-items: start;
+        }
+
+        .card {
+            background-color: white;
+            height: 700px;
+            border: 1px solid #bcb9b9;
+            box-shadow: 0 2px 4px #656363;
+            padding-bottom: 10px;
+            
+        }
+
+        .card img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .content {
+            padding: 12px;
+        }
+
+        .content h3 {
+            height: 50px;
+            font-size: 16px;
+            margin: 0 0 12px;
+        }
+
+        .content p {
+            height: 150px;
+            font-size: 20px;
+            line-height: 1.25;
+            margin: 0 0 12px;
+        }
+
+        .content button {
+            width: 100%;
+            padding: 10px;
+            background-color: #6a6969;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .content button:hover {
+            background-color: #656464;
+        }
+
+        /* Tablet */
+        @media (max-width: 100%) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .card img {
+                height: 200px;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 100%) {
+            body {
+                padding: 15px;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .card img {
+                height: px;
+            }
+
+            .content h3 {
+                font-size: 20px;
+            }
+
+            .content p {
+                font-size: 20px;
+            }
+
+            .content button {
+                padding: 15px;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=600&q=80" alt="Green mountain landscape">
+            <div class="content">
+                <h3>Seamlessly visualize quality</h3>
+                <p>Collaboratively administrate empowered markets via plug-and-play networks.</p>
+                <button>Here's why</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=600&q=80" alt="Beautiful tropical beach">
+            <div class="content">
+                <h3>Completely Synergize</h3>
+                <p>Dramatically engage seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing.</p>
+                <button>Here's how</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=600&q=80" alt="Ocean waves">
+            <div class="content">
+                <h3>Dynamically Procrastinate</h3>
+                <p>Completely synergize resource taxing relationships via premier niche markets.</p>
+                <button>Read more</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=600&q=80" alt="Beach with clear water">
+            <div class="content">
+                <h3>Best in class</h3>
+                <p>Imagine jumping into that boat, and just letting it sail wherever the wind takes you...</p>
+                <button>Just do it...</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=600&q=80" alt="Scenic outdoor landscape">
+            <div class="content">
+                <h3>Dynamically innovate supply chains</h3>
+                <p>Holistically predominate extensible testing procedures for reliable supply chains.</p>
+                <button>Here's why</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=600&q=80" alt="Tropical green plants">
+            <div class="content">
+                <h3>Sanity check</h3>
+                <p>Objectively innovate empowered manufactured products whereas parallel platforms.</p>
+                <button>Stop here</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

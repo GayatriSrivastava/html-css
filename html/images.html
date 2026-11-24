@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>images hw</title>
+</head>
+<body>
+    1. Image in the same folder
+        <img src="plushy.jpg" alt="A cute plushy">
+    2. Image inside the images folder
+        <img src="images/plushy.jpg" alt="A cute plushy" width="200">
+    3. Image inside assets/images
+        <img src="assets/images/plushy.jpg" alt="A cute plushy">
+    4. HTML file inside pages, image in root folder
+        <img src="../plushy.jpg" alt="A cute plushy">
+    5. Image with all given attributes
+        <img src="images/plushy.jpg"
+     alt="Beautiful bunny plushy"
+     width="300"
+     height="200">
+    6. Add a title attribute
+        <img src="plushy.jpg"
+     alt="A cute plushy"
+     title="Click to view full size">
+    7. Lazy loading
+        <img src="images/plushy.jpg"
+     alt="A cute plushy"
+     loading="lazy">
+    8. Hero image with eager loading
+        <img src="plushy.jpg"
+     alt="Hero plushy image"
+     loading="eager">
+    9. loading="auto"
+        <img src="plushy.jpg"
+     alt="A cute plushy"
+     loading="auto">
+    10. Responsive image using srcset
+        <img src="small.jpg"
+     srcset="small.jpg 400w,
+             medium.jpg 800w,
+             large.jpg 1200w"
+     alt="Responsive image">
+    11. Complete image tag
+        <img src="images/plushy.jpg"
+     alt="A cute plushy"
+     width="300"
+     height="200"
+     loading="lazy"
+     title="Click to view full size"
+     srcset="images/plushy.jpg 400w,
+             images/clock.jpg 800w">
+    12. Two images side by side
+        <img src="assets/logo.png"
+     alt="Company logo"
+     width="250"
+     loading="eager">
+
+    <img src="images/products/shoe.jpg"
+     alt="Product shoe"
+     width="250"
+     loading="lazy">
+</body>
+</html>

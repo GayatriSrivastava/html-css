@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Template Areas</title>
+<style>
+        .container {
+            display: grid;
+            grid-template-columns: 25% 30% 45%;
+            grid-template-rows: 30% 35% 35%;
+            grid-template-areas:"left top top"
+                                "left middle right"
+                                "left middle bottom";
+
+            height: 400px;
+            width: 530px;
+            border: 3px solid black;
+        }
+
+        .left {
+            grid-area: left;
+            border-right: 3px solid black;
+        }
+
+        .top {
+            grid-area: top;
+            border-bottom: 3px solid black;
+        }
+
+        .middle {
+            grid-area: middle;
+            border-right: 3px solid black;
+        }
+
+        .right {
+            grid-area: right;
+            border-bottom: 3px solid black;
+        }
+
+        .bottom {
+            grid-area: bottom;
+        }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="left"></div>
+        <div class="top"></div>
+        <div class="middle"></div>
+        <div class="right"></div>
+        <div class="bottom"></div>
+    </div>
+</body>
+</html>

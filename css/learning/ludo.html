@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .cont{
+        height:200px;
+        width:200px;
+        border: 2px solid black;
+    }
+    .red{
+        background-color: red;
+        height:inherit;
+        width:inherit;
+        clip-path: polygon(0 0,50% 50%,100% 0);
+        position:absolute;
+    }
+    .blue{
+        height:inherit;
+        width:inherit;
+        background-color: blue;
+        clip-path: polygon(0 0, 50% 50%, 0 100%);
+        position:absolute;
+    }
+    .green{
+        height:inherit;
+        width:inherit;
+        background-color: green;
+        clip-path: polygon(0 100%, 50% 50%, 100% 100%);
+        position:absolute;
+    }
+    .yellow{
+        height:inherit;
+        width:inherit;
+        background-color: yellow;
+        clip-path: polygon(100% 0, 50% 50%, 100% 100%);
+        position:absolute;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div class="red"></div>
+        <div class="blue"></div>
+        <div class="green"></div>
+        <div class="yellow"></div>
+    </div>
+</body>
+</html>

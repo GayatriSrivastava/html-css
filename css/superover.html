@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Super Over</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    background:#10141a;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    font-family:Arial,sans-serif;
+}
+.container{
+    width:840px;
+    height:464px;
+    position:relative;
+    overflow:hidden;
+    border:2px solid #ddd;
+    background:linear-gradient(to bottom,#101a2b 0%,#172a3c 35%,#293a3d 60%,#101d13 100%);
+}
+.stadium{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:
+    radial-gradient(ellipse at 50% 100%,#173b0b 0%,#10250c 55%,transparent 56%),
+    linear-gradient(175deg,transparent 38%,#101619 39%,#1b2523 58%,transparent 59%);
+}
+.stadium::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:repeating-linear-gradient(90deg,transparent 0px,transparent 3px,rgba(255,255,255,0.025) 4px),
+    repeating-linear-gradient(0deg,transparent 0px,transparent 3px,rgba(255,255,255,0.025) 4px);
+}
+.logo{
+    position:absolute;
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
+    color:white;
+    font-size:19px;
+    font-weight:900;
+    line-height:17px;
+    display:flex;
+    align-items:center;
+    gap:5px;
+}
+.logo span{
+    font-size:27px;
+}
+.scoreboard{
+    position:absolute;
+    top:104px;
+    left:50%;
+    transform:translateX(-50%);
+    width:594px;
+    display:flex;
+    justify-content:space-between;
+}
+.team{
+    width:267px;
+    height:214px;
+    border-radius:12px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    color:white;
+}
+.india{
+    background:rgba(0,91,194,0.85);
+}
+.pakistan{
+    background:rgba(43,173,36,0.85);
+}
+.team h1{
+    font-size:52px;
+    font-weight:900;
+    margin-top:26px;
+    letter-spacing:2px;
+}
+.balls{
+    display:flex;
+    gap:6px;
+    margin-top:24px;
+}
+.balls span{
+    width:29px;
+    height:29px;
+    background:white;
+    color:#111;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:19px;
+    font-weight:900;
+}
+.score{
+    font-size:29px;
+    font-weight:900;
+    margin-top:15px;
+}
+.buttons{
+    position:absolute;
+    bottom:36px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    gap:34px;
+}
+.btn{
+    width:60px;
+    height:60px;
+    border-radius:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:39px;
+    border:3px solid white;
+    box-shadow:0 2px 5px rgba(0,0,0,0.4);
+}
+.bat{
+    background:#ffb52e;
+}
+.reset{
+    background:#ed2929;
+}
+@media(max-width:650px){
+    .container{
+        width:100%;
+        height:420px;
+    }
+    .scoreboard{
+        width:94%;
+        top:110px;
+        gap:12px;
+    }
+    .team{
+        width:50%;
+        height:190px;
+    }
+    .team h1{
+        font-size:38px;
+    }
+    .balls{
+        gap:3px;
+    }
+    .balls span{
+        width:24px;
+        height:24px;
+        font-size:15px;
+    }
+    .score{
+        font-size:25px;
+    }
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="stadium"></div>
+
+    <div class="logo">
+        <span>🏏</span>
+        <div>SUPER<br>OVER</div>
+    </div>
+
+    <div class="scoreboard">
+        <div class="team india">
+            <h1>IND</h1>
+            <div class="balls">
+                <span>4</span>
+                <span>3</span>
+                <span>2</span>
+                <span>6</span>
+                <span>6</span>
+                <span>6</span>
+            </div>
+            <div class="score">27/0</div>
+        </div>
+
+        <div class="team pakistan">
+            <h1>PAK</h1>
+            <div class="balls">
+                <span>2</span>
+                <span>4</span>
+                <span>0</span>
+                <span>3</span>
+                <span>1</span>
+                <span>4</span>
+            </div>
+            <div class="score">14/0</div>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <div class="btn bat">🏏</div>
+        <div class="btn reset">⟲</div>
+    </div>
+</div>
+</body>
+</html>

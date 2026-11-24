@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Solar System</title>
+    <style>
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sun {
+            height: 100px;
+            width: 100px;
+            background-color: orange;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .orbit {
+            border: 1px solid black;
+            border-radius: 50%;
+            position: absolute;
+            animation: revolve  linear infinite;
+        }
+
+        .orbit1 {
+            height: 180px;
+            width: 180px;
+            animation-duration: 3s;
+        }
+
+        .orbit2 {
+            height: 280px;
+            width: 280px;
+            animation-duration: 5s;
+        }
+
+        .orbit3 {
+            height: 390px;
+            width: 390px;
+            animation-duration: 7s;
+        }
+
+        .orbit4 {
+            height: 500px;
+            width: 500px;
+            animation-duration: 9s;
+        }
+
+        .planet {
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            position: relative;
+            top: 0;
+            left: 50%;
+        }
+
+        .mercury {
+            background-color: grey;
+        }
+
+        .venus {
+            background-color: goldenrod;
+            height: 30px;
+            width: 30px;
+        }
+
+        .earth {
+            background-color: blue;
+            height: 32px;
+            width: 32px;
+        }
+
+        .mars {
+            background-color: red;
+            height: 28px;
+            width: 28px;
+        }
+
+        @keyframes revolve {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="sun"></div>
+
+        <div class="orbit orbit1">
+            <div class="planet mercury"></div>
+        </div>
+
+        <div class="orbit orbit2">
+            <div class="planet venus"></div>
+        </div>
+
+        <div class="orbit orbit3">
+            <div class="planet earth"></div>
+        </div>
+
+        <div class="orbit orbit4">
+            <div class="planet mars"></div>
+        </div>
+
+    </div>
+</body>
+</html>

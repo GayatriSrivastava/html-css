@@ -1,0 +1,299 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sudoku</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:Arial,sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:white;
+}
+.container{
+    display:flex;
+    gap:45px;
+    align-items:center;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+.box{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:22px;
+}
+h2{
+    font-size:28px;
+    font-weight:400;
+    letter-spacing:3px;
+}
+table{
+    border-collapse:collapse;
+    border:3px solid #222;
+}
+td{
+    width:41px;
+    height:41px;
+    border:1px solid #999;
+    text-align:center;
+    vertical-align:middle;
+    font-size:25px;
+    font-weight:400;
+}
+tr:nth-child(3n) td{
+    border-bottom:3px solid #222;
+}
+td:nth-child(3n){
+    border-right:3px solid #222;
+}
+tr:nth-child(-n+3) td:nth-child(n+4):nth-child(-n+6),
+tr:nth-child(n+4):nth-child(-n+6) td:nth-child(-n+3),
+tr:nth-child(n+4):nth-child(-n+6) td:nth-child(n+7),
+tr:nth-child(n+7) td:nth-child(n+4):nth-child(-n+6){
+    background:#a8d9bd;
+}
+@media(max-width:600px){
+    .container{
+        gap:35px;
+        padding:20px;
+    }
+    td{
+        width:34px;
+        height:34px;
+        font-size:20px;
+    }
+    h2{
+        font-size:23px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<div class="box">
+<h2>SUDOKU</h2>
+
+<table>
+<tr>
+    <td>8</td>
+    <td></td>
+    <td>6</td>
+    <td></td>
+    <td></td>
+    <td>3</td>
+    <td></td>
+    <td>9</td>
+    <td></td>
+</tr>
+<tr>
+    <td></td>
+    <td>4</td>
+    <td></td>
+    <td></td>
+    <td>1</td>
+    <td></td>
+    <td></td>
+    <td>6</td>
+    <td>8</td>
+</tr>
+<tr>
+    <td>2</td>
+    <td></td>
+    <td></td>
+    <td>8</td>
+    <td>7</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>5</td>
+</tr>
+<tr>
+    <td>1</td>
+    <td></td>
+    <td>8</td>
+    <td></td>
+    <td></td>
+    <td>5</td>
+    <td></td>
+    <td>2</td>
+    <td></td>
+</tr>
+<tr>
+    <td></td>
+    <td>3</td>
+    <td></td>
+    <td>1</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>5</td>
+    <td></td>
+</tr>
+<tr>
+    <td>7</td>
+    <td></td>
+    <td>5</td>
+    <td></td>
+    <td>3</td>
+    <td></td>
+    <td>9</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td></td>
+    <td>2</td>
+    <td>1</td>
+    <td></td>
+    <td></td>
+    <td>7</td>
+    <td></td>
+    <td>4</td>
+    <td></td>
+</tr>
+<tr>
+    <td>6</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>2</td>
+    <td></td>
+    <td>8</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td></td>
+    <td>8</td>
+    <td>7</td>
+    <td>6</td>
+    <td></td>
+    <td>4</td>
+    <td></td>
+    <td></td>
+    <td>3</td>
+</tr>
+</table>
+</div>
+
+<div class="box">
+<h2>ANSWER</h2>
+
+<table>
+<tr>
+    <td>8</td>
+    <td>7</td>
+    <td>6</td>
+    <td>5</td>
+    <td>4</td>
+    <td>3</td>
+    <td>1</td>
+    <td>9</td>
+    <td>2</td>
+</tr>
+<tr>
+    <td>5</td>
+    <td>4</td>
+    <td>3</td>
+    <td>2</td>
+    <td>1</td>
+    <td>9</td>
+    <td>7</td>
+    <td>6</td>
+    <td>8</td>
+</tr>
+<tr>
+    <td>2</td>
+    <td>1</td>
+    <td>9</td>
+    <td>8</td>
+    <td>7</td>
+    <td>6</td>
+    <td>4</td>
+    <td>3</td>
+    <td>5</td>
+</tr>
+<tr>
+    <td>1</td>
+    <td>9</td>
+    <td>8</td>
+    <td>7</td>
+    <td>6</td>
+    <td>5</td>
+    <td>3</td>
+    <td>2</td>
+    <td>4</td>
+</tr>
+<tr>
+    <td>4</td>
+    <td>3</td>
+    <td>2</td>
+    <td>1</td>
+    <td>9</td>
+    <td>8</td>
+    <td>6</td>
+    <td>5</td>
+    <td>7</td>
+</tr>
+<tr>
+    <td>7</td>
+    <td>6</td>
+    <td>5</td>
+    <td>4</td>
+    <td>3</td>
+    <td>2</td>
+    <td>9</td>
+    <td>8</td>
+    <td>1</td>
+</tr>
+<tr>
+    <td>3</td>
+    <td>2</td>
+    <td>1</td>
+    <td>9</td>
+    <td>8</td>
+    <td>7</td>
+    <td>5</td>
+    <td>4</td>
+    <td>6</td>
+</tr>
+<tr>
+    <td>6</td>
+    <td>5</td>
+    <td>4</td>
+    <td>3</td>
+    <td>2</td>
+    <td>1</td>
+    <td>8</td>
+    <td>7</td>
+    <td>9</td>
+</tr>
+<tr>
+    <td>9</td>
+    <td>8</td>
+    <td>7</td>
+    <td>6</td>
+    <td>5</td>
+    <td>4</td>
+    <td>2</td>
+    <td>1</td>
+    <td>3</td>
+</tr>
+</table>
+</div>
+
+</div>
+</body>
+</html>
